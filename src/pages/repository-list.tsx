@@ -24,12 +24,14 @@ export const RepositoryList: React.FC<Props> = (props) => {
 
   return (
     <ul>
-      {repositories &&
+      {repositories.length === 0 ? (
+        repositories &&
         repositories.map((repository, index) => (
           <RepositoryItem key={index} repository={repository} />
-        ))}
+        ))
+      ) : (
+        <RepositoryItem repository={{} as any} />
+      )}
     </ul>
   );
 };
-
-
