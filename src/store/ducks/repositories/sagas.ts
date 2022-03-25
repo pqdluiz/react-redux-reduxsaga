@@ -1,11 +1,11 @@
-import { call, put } from 'redux-saga/effects';
-import api from '../../../services/api';
+import { call, put } from "redux-saga/effects";
+import api from "../../../services/api";
 
-import { loadSuccess, loadFailure } from './actions';
+import { loadSuccess, loadFailure } from "./actions";
 
-export function* load() {
+export function* load(): Generator<any, void, unknown> {
   try {
-    const response = yield call(api.get, 'users/diego3g/repos');
+    const response: any = yield call(api.get, "users/diego3g/repos");
 
     yield put(loadSuccess(response.data));
   } catch (err) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 
-import RepositoryList from "./pages/repositry-list";
+import RepositoryList from "./containers/repository-list";
 import store from "./store";
 
 export const App: React.FC = () => {
@@ -12,3 +12,4 @@ export const App: React.FC = () => {
   )
 };
 
+ 

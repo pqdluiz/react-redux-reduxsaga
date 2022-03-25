@@ -1,4 +1,4 @@
-import { Reducer } from "redux";
+import { AnyAction, Reducer } from "redux";
 import { RepositoriesState, RepositoriesTypes } from "./types";
 
 const INITIAL_STATE: RepositoriesState = {
@@ -7,7 +7,7 @@ const INITIAL_STATE: RepositoriesState = {
   loading: false,
 };
 
-const reducer: Reducer<RepositoriesState> = (state = INITIAL_STATE, action) => {
+const reducer: Reducer<RepositoriesState> = (state = INITIAL_STATE, action: AnyAction) => {
   switch (action.type) {
     case RepositoriesTypes.LOAD_REQUEST:
       return { ...state, loading: true };
