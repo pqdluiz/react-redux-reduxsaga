@@ -1,4 +1,4 @@
-# React Redux e Redux-Saga
+# React, Redux e Redux-Saga
 
 * Um projeto demonstrativo de uso dessas tecnologias usando a API do Github.
 
